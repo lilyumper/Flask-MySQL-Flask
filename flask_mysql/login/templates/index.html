@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <h1>Enter Your Info!</h1>
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <p>{{message}}</p>
+    {% endfor %} {% endif %} {% endwith %}
+    <form action="/login" , method="post">
+        <h1>Welcome Please Login with your Email and Password!!</h1>
+        <label for="email">Email:</label><input type="text" name='email'>
+        <label for="password">Password:</label><input type="password" name="password">
+        <input type="submit" value="Login">
+    </form>
+    <hr>
+    <form action="/register" , method="post">
+        <h4>Not a Member? Please Register!</h4>
+        <label for="first_name">First Name:</label><input type="text" name="first_name">
+        <label for="last_name">Last Name:</label><input type="text" name="last_name">
+        <label for="email">Email:</label><input type="text" name="email">
+        <label for="password">Password:</label><input type="password" name="password">
+        <label for="confirm_pass">Confirm Password:</label><input type="password" name="confirm_password">
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+
+</html>

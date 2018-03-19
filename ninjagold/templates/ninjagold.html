@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../static/ninja.css">
+    <title>Ninja Loot</title>
+</head>
+
+<body>
+    Your Gold: <input type="text" name='gold' value="{{loot}}">
+    <div id='containter'>
+        <div id="farm1">
+            <h4><b>Farm</b></h4>
+            <hz>(Earns 10-20 golds)</hz>
+            <form action="/process" method="post">
+                <input type="hidden" name="building" value="farm" />
+                <input type="submit" , value='Find Gold!'>
+            </form>
+        </div>
+        <div id="cave1">
+            <h4><b>Cave</b></h4>
+            <hz>(Earns 5-10 golds)</hz>
+            <form action="/process" method="post">
+                <input type="hidden" name="building" value="cave" />
+                <input type="submit" value="Find Gold!" />
+            </form>
+
+        </div>
+        <div id="house1">
+            <h4><b>House</b></h4>
+            <hz>(Earns 2-5 golds)</hz>
+            <form action="/process" method="post">
+                <input type="hidden" name="building" value="house" />
+                <input type="submit" value="Find Gold!" />
+            </form>
+
+        </div>
+        <div id="casino1">
+            <h4><b>Casino</b></h4>
+            <hz>(Earns/Takes 0-50 golds)</hz>
+            <form action="/process" method="post">
+                <input type="hidden" name="building" value="casino" />
+                <input type="submit" value="Find Gold!" />
+            </form>
+
+        </div>
+        <div id="act">
+            <h6>Activites</h6>
+            <textarea name="area" id="textarea" cols="30" rows="10">
+                {{info}}
+            </textarea>
+        </div>
+        <div>
+            <form action='/process' method="POST">
+                <input type="hidden" name="building" value="restart" />
+                <input type="submit" value="Reset">
+            </form>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>

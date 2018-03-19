@@ -1,0 +1,28 @@
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+#fill {
+    display: inline-block;
+    margin-left: 400px;
+    margin-top: 5px;
+}
+
+#button {
+    display: inline-block;
+    margin-left: 450px;
+    margin-top: 15px;
+}
+
+#container {
+    width: 1000px;
+    height: auto;
+    margin-top: 50px;
+}
+
+.answer {
+    margin-left: 450px;
+    margin-top: 10px;
+}

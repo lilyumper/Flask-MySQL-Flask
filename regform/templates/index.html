@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <div id="container">
+        <form action="/process" method="POST">
+            Email:<input type="text" name="email"> First Name:<input type="text" name="first_name"> Last Name: <input type="text" name="last_name"> Password: <input type="password" name="password"> Confirm Password:<input type="password" name="confirm">
+            <input type="Submit" value="login">
+
+
+        </form>
+        <div>
+            {% with blanks = get_flashed_messages(category_filter=["blankerror"]) %} {% if blanks %}
+            <div class="blankerror">
+                <ul>
+                    {%- for msg in blanks %}
+                    <li>{{ msg }}</li>
+                    {% endfor -%}
+                </ul>
+            </div>
+            {% endif %} {% endwith %}
+        </div>
+        <div>
+            {% with tecos = get_flashed_messages(category_filter=["passerror"]) %} {% if tecos %}
+            <div class="passerror">
+                <ul>
+                    {%- for msg1 in tecos %}
+                    <li>{{ msg1 }}</li>
+                    {% endfor -%}
+                </ul>
+            </div>
+            {% endif %} {% endwith %}
+        </div>
+    </div>
+    <div>
+        {% with bink = get_flashed_messages(category_filter=["emailerror"]) %} {% if bink %}
+        <div class="error">
+            <ul>
+                {%- for msg2 in bink %}
+                <li>{{ msg2 }}</li>
+                {% endfor -%}
+            </ul>
+        </div>
+        {% endif %} {% endwith %}
+    </div>
+    </div>
+    <div>
+        {% with tacos = get_flashed_messages(category_filter=["nope"]) %} {% if tacos %}
+        <div class="nope">
+            <ul>
+                {%- for msg3 in tacos %}
+                <li>{{ msg3 }}</li>
+                {% endfor -%}
+            </ul>
+        </div>
+        {% endif %} {% endwith %}
+    </div>
+    </div>
+    <div>
+        {% with panda = get_flashed_messages(category_filter=["nodice"]) %} {% if panda %}
+        <div class="nodice">
+            <ul>
+                {%- for msg4 in panda %}
+                <li>{{ msg4 }}</li>
+                {% endfor -%}
+            </ul>
+        </div>
+        {% endif %} {% endwith %}
+    </div>
+    </div>
+</body>
+
+</html>

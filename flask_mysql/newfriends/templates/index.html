@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Full Friends</title>
+</head>
+
+<body>
+    <div>
+        <h1>Friends</h1>
+    </div>
+    <div>
+        <form action="/submit" , method="post">
+
+
+            <h1>These are all my friends!</h1>
+            <!-- with all the data we can then construct a more structured output -->
+            {% for friend in all_friends: %}
+            <p>Full Name: {{ friend['name'] }}</p>
+            <p>Age: {{ friend['age'] }}</p>
+            <p>Friends Since: {{ friend['friend_since'] }}</p>
+
+            <hr> {% endfor %}
+            <label>Name:</label>
+            <input type="text" name="name" id="name">
+            <label>Age:</label>
+            <input type="text" id="age" name="age">
+            <input type="submit" value="Add User">
+        </form>
+    </div>
+
+</body>
+
+</html>

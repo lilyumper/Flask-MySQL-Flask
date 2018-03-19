@@ -1,0 +1,21 @@
+#container {
+    width: 1000px
+}
+
+#farm1,
+#cave1,
+#house1,
+#casino1 {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    outline: 3px solid black;
+    padding: 25px;
+}
+
+#textarea {
+    width: 800px;
+    height: 300px;
+}
